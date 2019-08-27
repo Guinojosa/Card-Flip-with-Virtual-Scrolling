@@ -1,0 +1,37 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    This is the Card Flip
+  </h1>
+</div>
+
+<div class="border border-secondary" style="margin-top: 50px">
+  <cdk-virtual-scroll-viewport itemSize="50" style="height: 650px;">
+    <div class="card-columns" >
+      <div *cdkVirtualFor="let item of items">
+        <div class="flip-card" [ngStyle]="{'height': ((item.length / 2) * 10) + 100 + 'px'}">
+          <div class="card text-white flip-card-inner" [ngStyle]="{'background-color': '#9ccc65'}">
+            <div class="card-body flip-card-front">
+              <h1 class="m-r-5" style="float: left;">10</h1>
+              <p class="card-text">{{item}}</p><br />
+              <div class="row">
+                <div class="col-md-5">
+                  <p class="card-text"><small>00000</small></p>
+                </div>
+                <div class="col-md-7 text-right">
+                  <p class="card-text"><small>lol</small></p>
+                </div>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <h1>MY JSSS</h1>
+              <p>Add value in card</p>
+              <p>Little man</p>
+              <input type="text" placeholder="Text Input" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </cdk-virtual-scroll-viewport>
+</div>
